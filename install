@@ -1,0 +1,14 @@
+#!/bin/sh
+
+dir=`pwd`
+
+rm -f ~/.conkyrc
+ln -s $dir/.conkyrc ~
+
+rm -f ~/.config/openbox/autostart.sh
+mkdir -p ~/.config/openbox/
+ln -s $dir/.config/openbox/autostart.sh ~/.config/openbox/
+
+rm -f ~/.config/autostart/gmixer-trayicon.desktop
+mkdir -p ~/.config/autostart/
+ln -s $dir/.config/autostart/gmixer-trayicon.desktop ~/.config/autostart/
