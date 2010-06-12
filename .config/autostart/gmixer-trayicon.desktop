@@ -1,0 +1,6 @@
+[Desktop Entry]
+Hidden=true
+Name=GMixer
+Exec=gmixer -d
+Type=Application
+
