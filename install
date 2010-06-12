@@ -2,6 +2,11 @@
 
 dir=`pwd`
 
+[ "$dir" == "$HOME" ] && echo "Cannot run script in home directory." && exit
+[ ! -e .conkyrc ] && echo "Error: .conkyrc not found." && exit
+[ ! -e .config/openbox/autostart.sh ] && echo "Error: autostart.sh not found." && exit
+[ ! -e .config/autostart/gmixer-trayicon.desktop ] && echo "Error: gmixer-trayicon.desktop not found." && exit
+
 rm -f ~/.conkyrc
 ln -s $dir/.conkyrc ~
 
