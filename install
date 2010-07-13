@@ -6,6 +6,7 @@ dir=`pwd`
 [ ! -e .conkyrc ] && echo "Error: .conkyrc not found." && exit
 [ ! -e .config/openbox/autostart.sh ] && echo "Error: autostart.sh not found." && exit
 [ ! -e .config/autostart/gmixer-trayicon.desktop ] && echo "Error: gmixer-trayicon.desktop not found." && exit
+[ ! -e .config/autostart/ssh-add.desktop ] && echo "Error: ssh-add.desktop not found." && exit
 
 rm -f ~/.conkyrc
 ln -s $dir/.conkyrc ~
@@ -15,5 +16,7 @@ mkdir -p ~/.config/openbox/
 ln -s $dir/.config/openbox/autostart.sh ~/.config/openbox/
 
 rm -f ~/.config/autostart/gmixer-trayicon.desktop
+rm -f ~/.config/autostart/ssh-add.desktop
 mkdir -p ~/.config/autostart/
 ln -s $dir/.config/autostart/gmixer-trayicon.desktop ~/.config/autostart/
+ln -s $dir/.config/autostart/ssh-add.desktop ~/.config/autostart/
