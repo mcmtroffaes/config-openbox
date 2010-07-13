@@ -3,5 +3,5 @@
 
 $BG -solid "#000000"
 conky &
-xterm &
+xterm -e bash &
 
