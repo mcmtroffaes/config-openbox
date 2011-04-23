@@ -2,6 +2,7 @@
 . $GLOBALAUTOSTART
 
 $BG -solid "#000000"
-conky &
-xterm -e bash &
+([ -n `pgrep conky` ] && killall conky) &
+(sleep 1 && conky) &
+(sleep 1 && xterm -e bash) &
 
