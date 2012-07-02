@@ -4,7 +4,7 @@ dir=`pwd`
 
 [ "$dir" == "$HOME" ] && echo "Cannot run script in home directory." && exit
 [ ! -e .conkyrc ] && echo "Error: .conkyrc not found." && exit
-[ ! -e .config/openbox/autostart.sh ] && echo "Error: autostart.sh not found." && exit
+[ ! -e .config/openbox/autostart ] && echo "Error: autostart not found." && exit
 [ ! -e .config/autostart/gmixer-trayicon.desktop ] && echo "Error: gmixer-trayicon.desktop not found." && exit
 [ ! -e .config/autostart/ssh-add.desktop ] && echo "Error: ssh-add.desktop not found." && exit
 
@@ -12,8 +12,9 @@ rm -f ~/.conkyrc
 ln -s $dir/.conkyrc ~
 
 rm -f ~/.config/openbox/autostart.sh
+rm -f ~/.config/openbox/autostart
 mkdir -p ~/.config/openbox/
-ln -s $dir/.config/openbox/autostart.sh ~/.config/openbox/
+ln -s $dir/.config/openbox/autostart ~/.config/openbox/
 
 rm -f ~/.config/autostart/gmixer-trayicon.desktop
 rm -f ~/.config/autostart/ssh-add.desktop
