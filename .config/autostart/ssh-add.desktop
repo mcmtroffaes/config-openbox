@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=SSH Add
-Exec=/usr/bin/ssh-add
-
